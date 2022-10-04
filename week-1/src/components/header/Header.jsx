@@ -1,6 +1,6 @@
 import React from "react"
 
-function App() {
+function Header() {
 
 
   return(
@@ -11,4 +11,4 @@ function App() {
   )
 }
 
-export default App;
+export default Header;
