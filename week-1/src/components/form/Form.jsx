@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import "./style.css";
 
 function Form({setTodoList, todoList}) {
 	// const [todoList, setTodoList] = useState([])
@@ -30,10 +31,12 @@ const onSubmitHandler = () =>{
 
   return(
     <div>
-			<div>
-      제목 <input type="text" value={inputs.title||""} name="title" onChange={onChangeHandler}/>
-			내용 <input type="text" value={inputs.content||""} name="content" onChange={onChangeHandler}/>
-			<button type="submit" onClick={onSubmitHandler}>추가하기</button>
+			<div className="input-group">
+				<label className="form-label">제목</label>
+      <input type="text" className="input-box" value={inputs.title||""} name="title" onChange={onChangeHandler}/>
+			<label className="form-label">내용</label>
+			<input type="text" className="input-box" value={inputs.content||""} name="content" onChange={onChangeHandler}/>
+			<button type="submit" onClick={onSubmitHandler} className="add-button">추가하기</button>
 			</div>
 
 

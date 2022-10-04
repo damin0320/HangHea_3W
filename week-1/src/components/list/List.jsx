@@ -28,11 +28,11 @@ const onDeleteHandler = (id) => {
 }
 
 return(
-<div>
-<div>
+<div className="list-container">
   <h2>
     Working
     </h2>
+    <div className="list-wrapper">
 					<>
 					{todoList.filter((i) => !i.isDone).map((item) =>{
 						return  <Todo key={item.id}
@@ -49,6 +49,7 @@ return(
       <h2>
     Done
     </h2>
+    <div className="list-wrapper">
 					<>
 					{todoList.filter((i) => i.isDone).map((item) =>{
 						return  <Todo key={item.id}
@@ -57,7 +58,7 @@ return(
                       onDoneHandler={onDoneHandler}/> 
 					})}
 					</>
-
+          </div>
 </div>
 </div>
 )
