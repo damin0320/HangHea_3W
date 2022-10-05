@@ -15,6 +15,8 @@ setInputs({
 	...inputs,
 	[e.target.name] : e.target.value
 })}
+// 리스트로 들어오는 값 computed property로 값 매칭해주기
+// setTodo(...~, todo)와 비슷한데 두 개를 한 번에 넣어준다. => 객체로 맞춰서
 // 등록	
 const onSubmitHandler = () =>{
 	let obj = {
@@ -34,6 +36,7 @@ const onSubmitHandler = () =>{
 			<div className="input-group">
 				<label className="form-label">제목</label>
       <input type="text" className="input-box" value={inputs.title||""} name="title" onChange={onChangeHandler}/>
+			{/* value가 undefined면 ""를 반환한다. */}
 			<label className="form-label">내용</label>
 			<input type="text" className="input-box" value={inputs.content||""} name="content" onChange={onChangeHandler}/>
 			<button type="submit" onClick={onSubmitHandler} className="add-button">추가하기</button>
